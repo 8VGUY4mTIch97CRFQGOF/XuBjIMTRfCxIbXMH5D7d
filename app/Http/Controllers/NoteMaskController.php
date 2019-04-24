@@ -15,6 +15,11 @@ class NoteMaskController extends Controller
         return view('main');
     }
 
+    public function test()
+    {
+        return view('test');
+    }
+
     public function ready(Request $request)
     {
         return view('ready');

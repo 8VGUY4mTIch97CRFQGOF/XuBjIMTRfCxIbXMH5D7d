@@ -1,6 +1,9 @@
 <?php
 
-Route::get('/', 'NoteMaskController@main')->name('main');
+Route::get('/', 'NoteMaskController@test')->name('test');
+
+Route::get('/main', 'NoteMaskController@main')->name('main');
+
 Route::get('/ready', 'NoteMaskController@ready')->name('ready');
 Route::get('/error', 'NoteMaskController@error')->name('error');
 
