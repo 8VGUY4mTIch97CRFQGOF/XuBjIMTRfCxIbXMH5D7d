@@ -2,9 +2,9 @@
     <div class="lang-selector">
         <div class="select language">
             <select id="language" name="self-desctucts">
-                <option value="1">English</option>
-                <option value="2">Russian</option>
-                <option value="3">Latvian</option>
+                <option value="en" @if(App::getLocale() == 'en') selected @endif >English</option>
+                <option value="ru" @if(App::getLocale() == 'ru') selected @endif >Russian</option>
+                <option value="lv" @if(App::getLocale() == 'lv') selected @endif >Latvian</option>
             </select>
         </div>
     </div>

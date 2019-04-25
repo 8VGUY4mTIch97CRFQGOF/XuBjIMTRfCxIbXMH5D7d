@@ -3,7 +3,7 @@
         <div class="header">
             @include('menu.top')
             <div class="main-h1-block">
-                <h1 class="heading">Send notes that will self-destruct after being read</h1>
+                <h1 class="heading">{{__('www.send_notes')}}</h1>
             </div>
         </div>
         <div class="note-input">

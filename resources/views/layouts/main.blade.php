@@ -89,8 +89,8 @@
 
 <div class="footer">
     <div class="footer-cont">
-        <div class="div-block-2"><a class="button w-button" href="/">Create new note</a>
-            <div class="div-block-3"><a class="link" href="#">Support</a><a class="link" href="#">Privacy</a><a class="link" href="#">About</a><a class="link" href="#">Blog</a></div>
+        <div class="div-block-2"><a class="button w-button" href="{{route('main')}}">Create new note</a>
+            <!-- <div class="div-block-3"><a class="link" href="#">Support</a><a class="link" href="#">Privacy</a><a class="link" href="#">About</a><a class="link" href="#">Blog</a></div> -->
         </div>
         <div class="socials"><a class="link-block-2 w-inline-block" href="https://facebook.com"><img src="/img/facebook-icon.svg" alt="Facebook" title="Facebook"/></a><a class="link-block-2 w-inline-block" href="https://twitter.com"><img src="/img/twitter-icon.svg" alt="Twitter" title="Twitter"/></a></div>
     </div>

@@ -2,14 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Notification;
+use App\Mail\NotificationWithName;
 use App\Note;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Session;
 use Hash;
+use Mail;
 
 class NoteMaskController extends Controller
 {
+    public function lng($locale='en')
+    {
+        if (!in_array($locale, ['en', 'ru', 'lv'])){
+            $locale = 'en';
+        }
+        Session::put('locale', $locale);
+        return redirect()->route('main');
+    }
+
     public function main()
     {
         return view('main');
@@ -144,7 +156,16 @@ class NoteMaskController extends Controller
 
         } else {
             $note->active = false;
+            $note->text = '';
             $note->save();
+
+            if ($note->notification_email !== null) {
+                if ($note->reference_name !== null) {
+                    Mail::to($note->notification_email)->send(new NotificationWithName($note->reference_name));
+                } else {
+                    Mail::to($note->notification_email)->send(new Notification());
+                }
+            }
         }
     }
 }
