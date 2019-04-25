@@ -25,6 +25,18 @@ class Note extends Model
         'destroy',
     ];
 
+    public static function destroy($request)
+    {
+        if (!$note = self::where('url', $request['url'])->first()) {
+            return false;
+        }
+
+        if (md5($note->id) == $request['d']) {
+            $note->active = self::_NO_;
+            $note->save();
+        }
+    }
+
     public static function add($request)
     {
         $ask_for_confirm = true;

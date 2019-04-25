@@ -43,6 +43,16 @@ class NoteMaskController extends Controller
         return view('error');
     }
 
+    public function destroy(Request $request)
+    {
+        $request->validate([
+            'd' => 'required',
+            'url' => 'required',
+        ]);
+        Note::destroy($request->all());
+        return redirect()->route('main');
+    }
+
     public function create(Request $request)
     {
         $request->validate([
@@ -51,6 +61,7 @@ class NoteMaskController extends Controller
 
         $note = Note::add($request->all());
         Session::flash('note_url', $note->url);
+        Session::flash('note_id', $note->id);
 
         $diffInHours = $note->destroy->diffInMinutes(Carbon::now());
         if ($diffInHours > 0) {
@@ -80,8 +91,10 @@ class NoteMaskController extends Controller
             }
 
             $destroy = $note->destroy;
+            $id = $note->id;
+            $url = $note->url;
 
-            return view('password_text', compact('text', 'timer', 'destroy'));
+            return view('password_text', compact('text', 'timer', 'destroy', 'id', 'url'));
         }
         return 'error';
     }
@@ -100,6 +113,7 @@ class NoteMaskController extends Controller
         $password = false;
         $confirmed = true;
         $destroy = $note->destroy;
+        $id = $note->id;
 
         $timer = 'no';
         $diffInSeconds = $note->destroy->diffInSeconds(Carbon::now(), false);
@@ -114,7 +128,7 @@ class NoteMaskController extends Controller
 
         $this->activeDisable($note);
 
-        return view('note', compact('text', 'ask_for_confirm', 'url', 'confirmed', 'password', 'destroy', 'timer'));
+        return view('note', compact('text', 'ask_for_confirm', 'url', 'confirmed', 'password', 'destroy', 'timer', 'id'));
     }
 
 
@@ -131,6 +145,7 @@ class NoteMaskController extends Controller
         $url = $note->url;
         $password = false;
         $destroy = $note->destroy;
+        $id = $note->id;
 
         $timer = 'no';
         $diffInSeconds = $note->destroy->diffInSeconds(Carbon::now(), false);
@@ -147,7 +162,7 @@ class NoteMaskController extends Controller
             $this->activeDisable($note);
         }
 
-        return view('note', compact('text', 'ask_for_confirm', 'url', 'password', 'destroy', 'timer'));
+        return view('note', compact('text', 'ask_for_confirm', 'url', 'password', 'destroy', 'timer', 'id'));
     }
 
     private function activeDisable($note)

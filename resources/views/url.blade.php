@@ -19,7 +19,16 @@
                 <div class="button-group">
                     <div class="secondary-button w-button" id="copyNote">Copy note link</div>
                     <a href="mailto:?body={{url('/')}}/{{Session::get('note_url', '')}}" class="secondary-button w-button">Email link</a>
-                    <a href="{{url('/')}}/{{Session::get('note_url', '')}}" class="primary-button w-button right">Destroy note now</a>
+                    @if(Session::get('timer', '') == 'yes')
+                        <form action="{{route('destroy')}}" method="post" class="right">
+                            {{csrf_field()}}
+                            <input type="hidden" name="d" value="{{md5(Session::get('note_id', ''))}}">
+                            <input type="hidden" name="url" value="{{Session::get('note_url', '')}}">
+                            <button class="primary-button w-button right">Destroy note now</button>
+                        </form>
+                    @else
+                        <a href="{{url('/')}}/{{Session::get('note_url', '')}}" class="primary-button w-button right">Destroy note now</a>
+                    @endif
                 </div>
             </div>
         </div>
