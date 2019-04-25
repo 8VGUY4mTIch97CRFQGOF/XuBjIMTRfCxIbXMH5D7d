@@ -14,9 +14,10 @@
                 @else
                     <div class="warning-block">This note was destroyed. If you need to keep it, copy it before closing this window!</div>
                 @endif
-                <div class="info-block note-preview">{{$text}}</div>
+                <div class="info-block note-preview" id="link">{{$text}}</div>
                 <div class="button-group">
-                    <div class="secondary-button w-button">Select note text</div>
+                    <div class="tooltip-container"><span class="tooltip">Copied to clipboard</span></div>
+                    <div class="secondary-button w-button" id="copyNote">Select note text</div>
                 </div>
             </div>
         </div>

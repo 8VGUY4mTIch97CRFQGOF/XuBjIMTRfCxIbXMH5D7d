@@ -37,6 +37,16 @@ class Note extends Model
             $password = Hash::make($request['password']);
         }
 
+        $notification_email = null;
+        if (isset($request['email'])) {
+            $notification_email = $request['email'];
+        }
+
+        $reference_name = null;
+        if (isset($request['name'])) {
+            $reference_name = $request['name'];
+        }
+
         $destroy_time = Carbon::now();
         switch ($request['self-desctucts']) {
             case '1':
@@ -60,6 +70,8 @@ class Note extends Model
         return static::create([
             'text' => $request['text'],
             'ask_for_confirm' => $ask_for_confirm,
+            'notification_email' => $notification_email,
+            'reference_name' => $reference_name,
             'password' => $password,
             'url' => self::getUniqueUrl(),
             'destroy' => $destroy_time,

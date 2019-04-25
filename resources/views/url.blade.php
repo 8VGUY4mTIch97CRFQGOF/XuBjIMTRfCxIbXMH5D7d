@@ -18,8 +18,8 @@
                 <div class="info-block tooltip-container"><b id="link">{{url('/')}}/{{Session::get('note_url', '')}}</b><span class="tooltip">Copied to clipboard</span></div>
                 <div class="button-group">
                     <div class="secondary-button w-button" id="copyNote">Copy note link</div>
-                    <div class="secondary-button w-button">Email link</div>
-                    <div class="primary-button w-button right">Destroy note now</div>
+                    <a href="mailto:?body={{url('/')}}/{{Session::get('note_url', '')}}" class="secondary-button w-button">Email link</a>
+                    <a href="{{url('/')}}/{{Session::get('note_url', '')}}" class="primary-button w-button right">Destroy note now</a>
                 </div>
             </div>
         </div>

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Session;
 use Hash;
 use Mail;
+use Exception;
 
 class NoteMaskController extends Controller
 {
@@ -159,13 +160,18 @@ class NoteMaskController extends Controller
             $note->text = '';
             $note->save();
 
-            if ($note->notification_email !== null) {
-                if ($note->reference_name !== null) {
-                    Mail::to($note->notification_email)->send(new NotificationWithName($note->reference_name));
-                } else {
-                    Mail::to($note->notification_email)->send(new Notification());
+            try {
+                if ($note->notification_email !== null) {
+                    if ($note->reference_name !== null) {
+                        Mail::to($note->notification_email)->send(new NotificationWithName($note->reference_name));
+                    } else {
+                        Mail::to($note->notification_email)->send(new Notification());
+                    }
                 }
+            } catch (Exception $e) {
+
             }
+
         }
     }
 }

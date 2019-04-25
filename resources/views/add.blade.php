@@ -54,13 +54,13 @@
                                     <div class="transparent-block">
                                         <h3>Destruction notification</h3>
                                         <div class="caption">E-mail to notify when note is destroyed</div>
-                                        <input class="ui-input" type="email" value=""/>
+                                        <input class="ui-input" type="email" name="email" value=""/>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="transparent-block">
                                         <div class="caption">Reference name for the note (optional)</div>
-                                        <input class="ui-input" type="text" value=""/>
+                                        <input class="ui-input" type="text" name="name" value=""/>
                                     </div>
                                 </div>
                             </div>

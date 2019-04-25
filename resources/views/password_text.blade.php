@@ -4,9 +4,25 @@
     @else:
         <div class="warning-block">This note was destroyed. If you need to keep it, copy it before closing this window!</div>
     @endif
-    <div class="info-block note-preview">{{$text}}</div>
+    <div class="info-block note-preview" id="psw-text">{{$text}}</div>
     <div class="button-group">
-        <div class="secondary-button w-button">Select note text</div>
+        <div class="tooltip-container"><span class="tooltip">Copied to clipboard</span></div>
+        <div class="secondary-button w-button" id="copyText">Select note text</div>
     </div>
 </div>
-<script>countDownTimer();</script>
+<script>
+    countDownTimer();
+
+    $('#copyText').on('click', function(){
+        var textToCopy = $('#psw-text').text();
+
+//        console.log(textToCopy)
+        copyToClipboard(textToCopy);
+
+        $('.tooltip-container').addClass('open');
+
+        setTimeout(function(){
+            $('.tooltip-container').removeClass('open');
+        }, 1000)
+    })
+</script>
