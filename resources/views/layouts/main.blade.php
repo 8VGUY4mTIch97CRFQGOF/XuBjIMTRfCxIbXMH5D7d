@@ -97,7 +97,8 @@
     </div>
 </div>
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer="defer"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js" crossorigin="anonymous" defer="defer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js" crossorigin="anonymous" defer="defer"></script> -->
+<script src="/js/jquery.validate.min.js" crossorigin="anonymous" defer="defer"></script>
 <script defer="defer" src="/js/app.min.js"></script>
 
 @yield('js_footer')

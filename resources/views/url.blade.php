@@ -12,7 +12,7 @@
                 @if(Session::get('timer', '') == 'yes')
                     <div class="warning-block">The note will self-destruct in <span id="countdown" data-destroy="{{Session::get('destroy', '')}}" data-minute="minute" data-second="second"></span></div>
                 @else
-                    <div class="warning-block">The note will self-destruct after reading it</div>
+                    <div class="warning-block">The note will self-destruct after reading</div>
                 @endif
 
                 <div class="info-block tooltip-container"><b id="link">{{url('/')}}/{{Session::get('note_url', '')}}</b><span class="tooltip">Copied to clipboard</span></div>

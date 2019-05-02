@@ -21,7 +21,7 @@
                                         <h3>Note self-destructs</h3>
                                         <div class="select">
                                             <select id="slct" name="self-desctucts">
-                                                <option value="0">after reading it</option>
+                                                <option value="0">after reading</option>
                                                 <option value="1">1 hour from now</option>
                                                 <option value="24">24 hours from now</option>
                                                 <option value="168">7 days from now</option>
@@ -53,7 +53,7 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="transparent-block">
                                         <h3>Destruction notification</h3>
-                                        <div class="caption">E-mail to notify when note is destroyed</div>
+                                        <div class="caption">E-mail me when note is destroyed</div>
                                         <input class="ui-input" type="email" name="email" value=""/>
                                     </div>
                                 </div>
