@@ -12,8 +12,16 @@
                     <form id="createNode" action="{{route('create')}}" name="email-form" method="post">
                         {{ csrf_field() }}
                         <div class="text-area-wrap">
-                            <textarea class="textarea w-input" id="field" name="text" placeholder="Write your note here..." maxlength="5000" required=""></textarea>
+                            <textarea class="textarea w-input" id="field" style="box-shadow: 1px 1px 4px 0 rgba(46,46,46,.38);" name="text" placeholder="Write your note here..." maxlength="5000" required=""></textarea>
                         </div>
+
+                        <div class="button-group">
+                            <input class="primary-button w-button" type="submit" value="Create note" data-wait="Please wait..."/><a class="right settings-button w-inline-block" href="/"><img class="settings-icon" src="/img/settings-icon.svg" alt=""/>
+                                <div data-open="Show options" data-close="Disable options">Show options</div></a>
+                        </div>
+
+                        <div class="spacer"></div>
+
                         <div class="slide-toggle settings-block hide">
                             <div class="row gap-60">
                                 <div class="col-xs-12 col-sm-6">
@@ -65,11 +73,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="spacer"></div>
+                        <!-- <div class="spacer"></div>
                         <div class="button-group">
                             <input class="primary-button w-button" type="submit" value="Create note" data-wait="Please wait..."/><a class="right settings-button w-inline-block" href="/"><img class="settings-icon" src="/img/settings-icon.svg" alt=""/>
                                 <div data-open="Show options" data-close="Disable options">Show options</div></a>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
