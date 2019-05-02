@@ -20,7 +20,7 @@
                                 <div data-open="Show options" data-close="Disable options">Show options</div></a>
                         </div>
 
-                        <div class="spacer"></div>
+                        <!-- <div class="spacer"></div> -->
 
                         <div class="slide-toggle settings-block hide">
                             <div class="row gap-60">
