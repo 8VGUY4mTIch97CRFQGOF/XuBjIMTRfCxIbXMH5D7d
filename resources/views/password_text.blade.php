@@ -13,7 +13,7 @@
                 {{csrf_field()}}
                 <input type="hidden" name="d" value="{{md5($id)}}">
                 <input type="hidden" name="url" value="{{$url}}">
-                <button class="primary-button w-button right">Destroy note now</button>
+                <button class="primary-button w-button right">Destroy now</button>
             </form>
         @endif
     </div>

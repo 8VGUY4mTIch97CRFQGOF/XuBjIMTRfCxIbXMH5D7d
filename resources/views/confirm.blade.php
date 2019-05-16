@@ -17,7 +17,7 @@
                         {{csrf_field()}}
                         <input type="hidden" name="id" value="{{request()->route('id')}}">
                         <input type="submit" class="primary-button w-button" value="Yes, show me the note">
-                        <a href="{{route('main')}}" class="secondary-button w-button">No, not now</a>
+                        <a href="{{route('main')}}" class="secondary-button w-button">Not now</a>
                     </form>
                 </div>
             </div>

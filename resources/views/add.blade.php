@@ -17,7 +17,7 @@
 
                         <div class="button-group">
                             <input class="primary-button w-button" type="submit" value="Create note" data-wait="Please wait..."/><a class="right settings-button w-inline-block" href="/"><img class="settings-icon" src="/img/settings-icon.svg" alt=""/>
-                                <div data-open="Show options" data-close="Disable options">Show options</div></a>
+                                <div data-open="Show options" data-close="Hide options">Show options</div></a>
                         </div>
 
                         <!-- <div class="spacer"></div> -->
@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="transparent-block">
-                                        <div class="caption">Reference name for the note (optional)</div>
+                                        <div class="caption">Reference name for the note</div>
                                         <input class="ui-input" type="text" name="name" value=""/>
                                     </div>
                                 </div>
