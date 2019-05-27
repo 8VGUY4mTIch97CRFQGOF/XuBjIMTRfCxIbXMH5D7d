@@ -12,7 +12,7 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="theme-color" content="#323453"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css"/>
-    <link href="/css/style.css?v1.2" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css?v1.3" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
     <style type="text/css">@font-face {
             font-weight: 400;
