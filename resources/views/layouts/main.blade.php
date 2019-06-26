@@ -92,7 +92,10 @@
 <div class="footer">
     <div class="footer-cont">
         <div class="div-block-2"><a class="button w-button" href="{{route('main')}}">Create new</a>
-            <div class="div-block-3"><a class="link" href="{{route('contact')}}">Contact</a><a class="link" href="{{route('policy')}}">Privacy Policy</a></div>
+            <ul class="footer_menu">
+                <li class="menu_item"><a href="{{route('contact')}}">Contact Us</a></li>
+                <li class="menu_item"><a href="{{route('policy')}}">Privacy Policy</a></li>
+            </ul>
         </div>
         <div class="socials"><a class="link-block-2 w-inline-block" href="https://facebook.com"><img src="/img/facebook-icon.svg" alt="Facebook" title="Facebook"/></a><a class="link-block-2 w-inline-block" href="https://twitter.com"><img src="/img/twitter-icon.svg" alt="Twitter" title="Twitter"/></a></div>
     </div>
