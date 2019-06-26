@@ -40,9 +40,9 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <div class="transparent-block no-heading">
-                                        <label class="checkbox-container">Do not ask for confirmation before showing and destroying the note
+                                        <!-- <label class="checkbox-container">Do not ask for confirmation before showing and destroying the note
                                             <input type="checkbox" name="dont_ask_confirm" value="1" /><span class="checkmark"></span>
-                                        </label>
+                                        </label> -->
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
@@ -71,6 +71,13 @@
                                         <input class="ui-input" type="text" name="name" value=""/>
                                     </div>
                                 </div>
+
+                                <div class="col-xs-12 show_mobile">
+                                    <div class="button-group mb">
+                                        <input class="primary-button w-button" type="submit" value="Create note" data-wait="Please wait...">
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <!-- <div class="spacer"></div>

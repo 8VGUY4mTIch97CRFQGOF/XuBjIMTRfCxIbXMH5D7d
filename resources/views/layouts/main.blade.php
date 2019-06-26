@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title> Home - Notemask</title>
+    <title>Home - Notemask</title>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"/>
@@ -13,6 +13,7 @@
     <meta name="theme-color" content="#323453"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet" type="text/css"/>
     <link href="/css/style.css?v1.3" rel="stylesheet" type="text/css"/>
+    <link href="/css/main.css?v1.1" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
     <style type="text/css">@font-face {
             font-weight: 400;
@@ -91,7 +92,7 @@
 <div class="footer">
     <div class="footer-cont">
         <div class="div-block-2"><a class="button w-button" href="{{route('main')}}">Create new</a>
-            <!-- <div class="div-block-3"><a class="link" href="#">Support</a><a class="link" href="#">Privacy</a><a class="link" href="#">About</a><a class="link" href="#">Blog</a></div> -->
+            <div class="div-block-3"><a class="link" href="{{route('contact')}}">Contact</a><a class="link" href="{{route('policy')}}">Privacy Policy</a></div>
         </div>
         <div class="socials"><a class="link-block-2 w-inline-block" href="https://facebook.com"><img src="/img/facebook-icon.svg" alt="Facebook" title="Facebook"/></a><a class="link-block-2 w-inline-block" href="https://twitter.com"><img src="/img/twitter-icon.svg" alt="Twitter" title="Twitter"/></a></div>
     </div>
@@ -99,7 +100,7 @@
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer="defer"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js" crossorigin="anonymous" defer="defer"></script> -->
 <script src="/js/jquery.validate.min.js" crossorigin="anonymous" defer="defer"></script>
-<script defer="defer" src="/js/app.min.js"></script>
+<script defer="defer" src="/js/app.min.js?v1.1"></script>
 
 @yield('js_footer')
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Contact;
 use App\Mail\Notification;
 use App\Mail\NotificationWithName;
 use App\Note;
@@ -131,6 +132,27 @@ class NoteMaskController extends Controller
         return view('note', compact('text', 'ask_for_confirm', 'url', 'confirmed', 'password', 'destroy', 'timer', 'id'));
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function form(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'text' => 'required',
+        ]);
+
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new Contact($request['name'], $request['email'], $request['text']));
+        return redirect()->back()->with('success', 'Thank you! Your message has been sent successfully.');
+    }
+
+    public function policy()
+    {
+        return view('policy');
+    }
 
     public function note(Request $request)
     {

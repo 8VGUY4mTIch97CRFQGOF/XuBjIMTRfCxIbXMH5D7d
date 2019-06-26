@@ -6,6 +6,11 @@ Route::get('/', 'NoteMaskController@main')->name('main');
 
 Route::get('/lng/{lng}', 'NoteMaskController@lng')->name('lng');
 
+Route::get('/contact', 'NoteMaskController@contact')->name('contact');
+Route::post('/contact', 'NoteMaskController@form')->name('form');
+
+Route::get('/policy', 'NoteMaskController@policy')->name('policy');
+
 Route::get('/ready', 'NoteMaskController@ready')->name('ready');
 Route::get('/error', 'NoteMaskController@error')->name('error');
 

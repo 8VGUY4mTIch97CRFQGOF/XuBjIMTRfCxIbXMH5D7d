@@ -15,10 +15,12 @@
                     <div class="warning-block">The note will self-destruct after reading</div>
                 @endif
 
-                <div class="info-block tooltip-container"><b id="link">{{url('/')}}/{{Session::get('note_url', '')}}</b><span class="tooltip">Copied to clipboard</span></div>
+                <div class="info-block tooltip-container" id="link-copy-block"><b id="link">{{url('/')}}/{{Session::get('note_url', '')}}</b><span class="tooltip">Copied to clipboard</span></div>
                 <div class="button-group">
                     <div class="secondary-button w-button" id="copyNote">Copy link</div>
                     <a href="mailto:?body={{url('/')}}/{{Session::get('note_url', '')}}" class="secondary-button w-button">Email link</a>
+                    <a href="{{url('/')}}" class="secondary-button w-button">Create new note</a>
+
                     @if(Session::get('timer', '') == 'yes')
                         <form action="{{route('destroy')}}" method="post" class="right">
                             {{csrf_field()}}
