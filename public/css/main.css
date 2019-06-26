@@ -103,7 +103,8 @@ input {
 .policy_container {
   padding: 40px;
   border-radius: 5px;
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: 40px; }
   .policy_container p {
     color: #323453;
     font-size: 14px; }
@@ -117,7 +118,8 @@ input {
 .contact_container {
   padding: 40px;
   border-radius: 5px;
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: 40px; }
   .contact_container *::-webkit-input-placeholder {
     color: rgba(50, 52, 83, 0.3);
     opacity: 1;
