@@ -68,7 +68,8 @@ class NoteMaskController extends Controller
         if ($diffInHours > 0) {
             Session::flash('timer', 'yes');
         }
-        Session::flash('destroy', $note->destroy);
+        $destroy = $note->destroy->format('M d, Y H:i:s');
+        Session::flash('destroy', $destroy);
         return redirect()->route('main');
     }
 
