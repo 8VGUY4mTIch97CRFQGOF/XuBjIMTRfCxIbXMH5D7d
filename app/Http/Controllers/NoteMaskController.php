@@ -91,7 +91,9 @@ class NoteMaskController extends Controller
                 $timer = 'yes';
             }
 
-            $destroy = $note->destroy;
+//            $destroy = $note->destroy;
+//            Jan 5, 2021 15:37:25
+            $destroy = $note->destroy->format('M d, Y H:i:s');
             $id = $note->id;
             $url = $note->url;
 
@@ -113,7 +115,8 @@ class NoteMaskController extends Controller
         $url = $note->url;
         $password = false;
         $confirmed = true;
-        $destroy = $note->destroy;
+//        $destroy = $note->destroy;
+        $destroy = $note->destroy->format('M d, Y H:i:s');
         $id = $note->id;
 
         $timer = 'no';
@@ -166,7 +169,8 @@ class NoteMaskController extends Controller
         $text = $note->text;
         $url = $note->url;
         $password = false;
-        $destroy = $note->destroy;
+//        $destroy = $note->destroy;
+        $destroy = $note->destroy->format('M d, Y H:i:s');
         $id = $note->id;
 
         $timer = 'no';
