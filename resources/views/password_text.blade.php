@@ -7,7 +7,7 @@
     <div class="info-block note-preview" id="psw-text">{{$text}}</div>
     <div class="button-group">
         <div class="tooltip-container"><span class="tooltip">Copied to clipboard</span></div>
-        <div class="secondary-button w-button" id="copyText">Select note text</div>
+        <div class="secondary-button w-button" id="copyText">Copy note text</div>
         @if($timer == 'yes')
             <form action="{{route('destroy')}}" method="post" class="right">
                 {{csrf_field()}}

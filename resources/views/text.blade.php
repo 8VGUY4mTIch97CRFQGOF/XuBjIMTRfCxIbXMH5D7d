@@ -3,7 +3,7 @@
         <div class="header">
             @include('menu.top')
             <div class="main-h1-block">
-                <h1 class="heading">Note contents</h1>
+                <h1 class="heading">Note content</h1>
             </div>
         </div>
         <div class="note-input">
@@ -17,7 +17,7 @@
                 <div class="info-block note-preview" id="link">{{$text}}</div>
                 <div class="button-group">
                     <div class="tooltip-container"><span class="tooltip">Copied to clipboard</span></div>
-                    <div class="secondary-button w-button" id="copyNote">Select note text</div>
+                    <div class="secondary-button w-button" id="copyNote">Copy note text</div>
                     @if($timer == 'yes')
                         <form action="{{route('destroy')}}" method="post" class="right">
                             {{csrf_field()}}

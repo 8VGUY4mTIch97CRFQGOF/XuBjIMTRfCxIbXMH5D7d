@@ -3,7 +3,7 @@
         <div class="header">
             @include('menu.top')
             <div class="main-h1-block">
-                <h1 class="heading">Note contents</h1>
+                <h1 class="heading">Note content</h1>
             </div>
         </div>
         <div class="note-input" id="content-psw">
